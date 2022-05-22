@@ -248,26 +248,26 @@ LOGGING = {
              'level': 'DEBUG',
              'class': 'logging.StreamHandler',
              'formatter': 'f_debug',
-             'filters': ['require_debug_true'],
+             'filters': ['require_debug_true'],  # выводим в консоль если DEBUG -> True
              },
         'console_w': {
              'level': 'WARNING',
              'class': 'logging.StreamHandler',
              'formatter': 'f_warning',
-             'filters': ['require_debug_true'],
+             'filters': ['require_debug_true'],  # выводим в консоль если DEBUG -> True
              },
         'console_e': {
              'level': 'ERROR',
              'class': 'logging.StreamHandler',
              'formatter': 'f_error',
-             'filters': ['require_debug_true'],
+             'filters': ['require_debug_true'],  # выводим в консоль если DEBUG -> True
              },
         'file_i': {
              'level': 'INFO',
              'class': 'logging.FileHandler',
              'filename': 'general.log',
              'formatter': 'f_info',
-             'filters': ['require_debug_false'],
+             'filters': ['require_debug_false'],  # выводим в файл если DEBUG -> False
              },
         'file_e': {
              'level': 'ERROR',
@@ -285,7 +285,7 @@ LOGGING = {
              'level': 'INFO',
              'class': 'django.utils.log.AdminEmailHandler',
              'formatter': 'f_mail',
-             'filters': ['require_debug_false'],
+             'filters': ['require_debug_false'], # выводим в почту если DEBUG -> False
              },
         },
 
